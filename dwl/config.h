@@ -134,6 +134,15 @@ static const char *menucmd[] = {
 static const char *scrfull[] = { "/home/devkun/.config/dwl/scripts/screenshot.sh", "full", NULL };
 static const char *scrsel[]  = { "/home/devkun/.config/dwl/scripts/screenshot.sh", "select", NULL };
 
+// voluem
+static const char *volumeUp[] = { "/home/devkun/.config/dwl/scripts/volume.sh", "up", NULL };
+static const char *volumeDown[] = { "/home/devkun/.config/dwl/scripts/volume.sh", "down", NULL };
+static const char *volumeMute[] = { "/home/devkun/.config/dwl/scripts/volume.sh", "mute", NULL };
+
+// brightness
+static const char *BriUp[] = { "/home/devkun/.config/dwl/scripts/brightness.sh", "up", NULL};
+static const char *BriDown[] = { "/home/devkun/.config/dwl/scripts/brightness.sh", "down", NULL};
+
 // pkill dwl
 static const char *pkill[] = { "pkill", "dwl", NULL };
 
@@ -174,8 +183,20 @@ static const Key keys[] = {
 	TAGKEYS(          XKB_KEY_9, XKB_KEY_parenleft,                     8),
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_q,           spawn,            {.v = pkill} },
 
+	// screenshot
 	{ MODKEY,            	       XKB_KEY_Print,      	spawn,          {.v = scrfull } },
 	{ MODKEY|WLR_MODIFIER_SHIFT, XKB_KEY_Print,      	spawn,          {.v = scrsel } },
+
+
+	// volume
+	{ 0, XKB_KEY_XF86AudioRaiseVolume, spawn, {.v = volumeUp} },
+	{ 0, XKB_KEY_XF86AudioLowerVolume, spawn, {.v = volumeDown} },
+	{ 0, XKB_KEY_XF86AudioMute,        spawn, {.v = volumeMute} },
+
+	// brightness
+
+	{ 0, XKB_KEY_XF86MonBrightnessUp,       spawn, {.v = BriUp} },
+	{ 0, XKB_KEY_XF86MonBrightnessDown,     spawn, {.v = BriDown} },
 
 	/* Ctrl-Alt-Backspace and Ctrl-Alt-Fx used to be handled by X server */
 	{ WLR_MODIFIER_CTRL|WLR_MODIFIER_ALT,XKB_KEY_Terminate_Server, quit, {0} },
