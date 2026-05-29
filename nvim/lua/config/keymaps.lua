@@ -32,6 +32,8 @@ vim.keymap.set("n", "<leader>Q", "<cmd> QuickSwitch <cr>" )
 -- fzf key
 vim.keymap.set("n", "<leader>ff", "<cmd> FzfLua files<cr>")
 
+-- vColor
+vim.keymap.set("n", "<leader>vc", "<cmd> VCoolor <cr>")
 
 
 

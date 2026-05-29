@@ -1,13 +1,8 @@
-:root {
-	--or-or: #ffff;
-}
-
-header {
-	background-color: mediumpurple;
-	background-color: red;
-	color: var(--or-or);
-}
-
 body {
-	background: red;
-}	
+	background: #01F4FF;	
+}
+
+header{
+	background: repeating-radial-gradient();
+}
+

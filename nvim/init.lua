@@ -18,5 +18,3 @@ local test = "hello neovim"
 
 print(test)
 
-
-

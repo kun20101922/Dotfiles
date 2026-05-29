@@ -115,7 +115,7 @@ return {
 						"cssls",
 						"html",
 						"pyright",
-						"clangd",
+						-- "clangd",
 						"tailwindcss",
 						"tombi",	
 						"bashls",

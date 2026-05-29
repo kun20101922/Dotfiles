@@ -14,6 +14,5 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({ spec = { { import = "lazy.plugins" } }, checker = { enabled = true } })
-vim.cmd.colorscheme("zen")
-
+vim.cmd.syntax("on")
 

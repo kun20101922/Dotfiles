@@ -19,13 +19,37 @@ return {
 		},
 		completion = {
 
+			-- default = {
+			-- 	enabled = true,
+			-- 	min_width = 15,
+			-- 	max_height = 10,
+			-- 	border = nil,
+			-- 	winblend = 0,
+			-- 	winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:None,Search:None',
+			-- 	--winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None',
+			--
+			--
+			-- 	-- keep the cursor X lines away from the top/bottom of the window
+			-- 	scrolloff = 5,
+			-- 	-- note that the gutter will be disabled when border ~= 'none'
+			-- 	scrollbar = false,
+			-- 	-- which directions to show the window,
+			-- 	-- falling back to the next direction when there's not enough space
+			-- 	direction_priority = { 's', 'n' },
+			-- 	-- which direction previous/next items show up
+			-- 	-- TODO: implement
+			-- 	order = { n = 'bottom_up', s = 'top_down' },
+			--
+			-- },
+
 			menu = {
 				auto_show = true,
 				scrollbar = false,
 				scrolloff = 10,
 				auto_show_delay_ms = 100,
-				min_width = 20,
-				max_height = 15,
+				min_width = 40,
+				winhighlight = 'Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:None,Search:None',
+				max_height = 50,
 				draw = {
 					padding = 2,
 					gap = 2,
@@ -61,5 +85,3 @@ return {
 	},
 	opts_extend = { "sources.default",  }
 }
-
-
